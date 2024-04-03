@@ -3,92 +3,45 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={styles.homepage}>
+      <div className={styles.header}>
+        <nav className={styles.nav}>
+          <a className={styles.navLogo} href="/"></a>
+          <div className={styles.navMenu}>
+            <div className={styles.dropdown}>
+              <div className={styles.navItem + " " + styles.gameDropdown}>
+                <div>Game</div> 
+                <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/arrow_over.png" className={styles.dropdownArrow}/>  
+              </div>
+              <div className={styles.gameDropdownContent}>
+                <a className={styles.gameDropdownContentText} href="">Patches</a>
+                <a className={styles.gameDropdownContentText} href="">Gameplay Updates</a>
+                <a className={styles.gameDropdownContentText} href="">Previous Updates</a>
+              </div>
+            </div>
+            <a className={styles.navItem} href="">Heroes</a>
+            <a className={styles.navItem} href="">News</a>
+            <a className={styles.navItem} href="">Esports</a>
+          </div>
+          <div className={styles.accountLanguage}>
+            <a className={styles.navLogin} href="">Login</a>
+            <div className={styles.languageWrapper}>
+              <div className={styles.languageIcon}></div>
+              <span>Select Language</span>
+              <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/arrow_over.png" className={styles.dropdownArrow}/>
+            </div>
+          </div>
+          <div className={styles.navButton}>
+            <div className={styles.navSteamLogo}></div>
+            <span className={styles.navButtonText}>Play for Free</span>
+          </div>
+        </nav>
+        <div className={styles.videoContainer}>
+          <video className={styles.video} preload="auto" loop autoPlay playsInline muted>
+            <source type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_webm.webm"/>
+            <source type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_02.mp4"/>  
+          </video>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
   );
