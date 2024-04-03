@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { symlink } from "fs";
 
 export default function Home() {
   return (
@@ -41,6 +42,22 @@ export default function Home() {
             <source type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_webm.webm"/>
             <source type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_02.mp4"/>  
           </video>
+        </div>
+        <div className={styles.quoteContainer}>
+          <div>
+            <div className={styles.quoteText}>“A Modern Multiplayer Masterpiece.”</div>
+            <div className={styles.quoteCredit}>- Destructoid</div>
+          </div>
+          <div className={styles.verticalBar}></div>
+          <div className={styles.playButtonWrapper}>
+            <a href="" className={styles.playButton}>
+              <div className={styles.steamLogo}></div>
+              <div className={styles.rightSide}>
+                <div className={styles.playforfree}>play for free</div>
+                <div className={styles.download}>download on steam</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </main>
