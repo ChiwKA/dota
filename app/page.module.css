@@ -261,6 +261,7 @@
     transition-property: filter, transform, box-shadow;
     transition-timing-function: ease-in-out;
     transition-duration: .1s;
+    backdrop-filter: blur(5px);
 }
 
 .playButton:hover {
