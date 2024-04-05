@@ -98,6 +98,23 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className={styles.bottomFade}></div>
+      </div>
+      <div className={styles.news}>
+        <div className={styles.newsWrapper}>
+          <div className={styles.newsHeading}>
+            <div className={styles.latestNews}>Latest News</div>
+            <div className={styles.viewAll}>
+              View All
+              <div className={styles.rightArrow}></div>
+            </div>
+          </div>
+          <div className={styles.newsCapsules}>
+            <a href="" className={styles.blogCapsule} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/8256a7d97ebed00f8e77c4834f9306d08976e15c.png')"}}></a>
+            <a href="" className={styles.blogCapsule} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/040f3cd7b283452e7939cf075284647905cbb900.png')"}}></a>
+            <a href="" className={styles.blogCapsule} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/005df03fc8e0a1f0370db32eedf47f877aef119e.png')"}}></a>
+          </div>
+        </div>
       </div>
     </main>
   );

@@ -12,6 +12,12 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
