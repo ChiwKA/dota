@@ -195,6 +195,17 @@
 .videoContainer {
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.videoContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .video {
@@ -375,11 +386,174 @@
 }
 
 .blogCapsule {
+    position: relative;
     display: block;
     width: 400px;
     height: 245px;
     margin: 15px;
+    border-bottom: 2px solid #555;
+    transition-property: transform box-shadow border-bottom;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+
+.blogCapsule:hover {
+    /* z-index: 100; */
+    transform: scale(1.02);
+    box-shadow: 0px 0px 30px #000;
+    border-bottom: 2px solid #ff6046;  
+}
+
+.blogCapsule::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.blogCapsule:hover::after {
+    background-color: rgba(0,0,0,.7);
+}
+
+.capsuleContent {
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.capsuleText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.capsuleDate {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.capsuleTitle {
+    margin: 0px 10px 8px 20px;
+    text-shadow: 0px 0px 10px #000;
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.capsuleDesc {
+    height: 0;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, .7);
+    margin-left: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition-property: opacity transform height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.blogCapsule:hover .capsuleDesc {
+    height: 120px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.battle {
+    width: 100%;
+    min-height: 764px;
+    position: relative;
+}
+
+.fadeContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.fadeTop {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.733) 90%, rgb(0, 0, 0) 100%);
+}
+
+.battleBG {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.battleImg {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.battleText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.battleHeaderText {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.joinThe {
+    color: #E2DACE90;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ancient {
+    font-size: 7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e2dace;
+}
+
+.battleBodyText {
+    margin-top: 20px;
+    color: #e2dace;
+    text-align: center;
+    font-size: 2.6rem;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.battleButton {
+    display: flex;
+    margin: 30px 30px 10px 30px;
+    border: #ffffff50 3px solid;
+    border-radius: 5px;
+    align-items: center;
+    padding: 15px 25px;
+    transition-duration: 0.2s;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #e2dace;
+}
+
+.battleButton:hover {
+    border-color: #ff6046;
+    transform: translateY(-2px);
 }
