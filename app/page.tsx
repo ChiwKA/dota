@@ -1,5 +1,34 @@
 import styles from "./page.module.css";
 
+// Test RESTful API (mockapi)
+async function NewsCapsule() {
+  const res = await fetch('https://65f129e5da8c6584131cf886.mockapi.io/data', {
+    method: 'GET',
+    headers: {'content-type':'application/json'}
+  })
+  if (!res.ok) {
+    throw new Error('failed to fetch data')
+  }
+  const data = await res.json()
+
+  return (
+    <div className={styles.newsCapsules}>
+      {data.map((capsule: any) => (
+        <a key={capsule.id} href={capsule.link} className={styles.blogCapsule}>
+          <div className={styles.capsuleContent} style={{backgroundImage: `url('${capsule.backgroundUrl}')`}}>
+            <div className={styles.capsuleText}>
+              <div className={styles.capsuleDate}>{capsule.date}</div>
+              <div className={styles.capsuleTitle}>{capsule.title}</div>
+              <div className={styles.capsuleDesc}>{capsule.description}</div>
+            </div>
+          </div>
+          <div className={styles.bottomFade}></div>
+        </a>
+      ))}
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <main className={styles.homepage}>
@@ -107,7 +136,8 @@ export default function Home() {
               <div className={styles.rightArrow}></div>
             </a>
           </div>
-          <div className={styles.newsCapsules}>
+          <NewsCapsule />
+          {/* <div className={styles.newsCapsules}>
             <a href="https://www.dota2.com/newsentry/6127782523022178336" className={styles.blogCapsule}>
               <div className={styles.capsuleContent} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/8256a7d97ebed00f8e77c4834f9306d08976e15c.png')"}}>
                 <div className={styles.capsuleText}>
@@ -138,7 +168,7 @@ export default function Home() {
               </div>
               <div className={styles.bottomFade}></div>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.battle}>
