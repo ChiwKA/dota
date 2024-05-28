@@ -1,6 +1,4 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import { symlink } from "fs";
 
 export default function Home() {
   return (
@@ -18,24 +16,24 @@ export default function Home() {
                 />
               </div>
               <div className={styles.gameDropdownContent}>
-                <a className={styles.gameDropdownContentText} href="">
+                <a className={styles.gameDropdownContentText} href="https://www.dota2.com/patches">
                   Patches
                 </a>
-                <a className={styles.gameDropdownContentText} href="">
+                <a className={styles.gameDropdownContentText} href="https://www.dota2.com/news/updates">
                   Gameplay Updates
                 </a>
-                <a className={styles.gameDropdownContentText} href="">
+                <a className={styles.gameDropdownContentText} href="https://www.dota2.com/pastupdates">
                   Previous Updates
                 </a>
               </div>
             </div>
-            <a className={styles.navItem} href="">
+            <a className={styles.navItem} href="https://www.dota2.com/heroes">
               Heroes
             </a>
-            <a className={styles.navItem} href="">
+            <a className={styles.navItem} href="https://www.dota2.com/news">
               News
             </a>
-            <a className={styles.navItem} href="">
+            <a className={styles.navItem} href="https://www.dota2.com/esports/ti12">
               Esports
             </a>
           </div>
@@ -52,10 +50,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={styles.navButton}>
+          <a className={styles.navButton} href="https://store.steampowered.com/app/570/Dota_2/">
             <div className={styles.navSteamLogo}></div>
             <span className={styles.navButtonText}>Play for Free</span>
-          </div>
+          </a>
         </nav>
         <div className={styles.videoContainer}>
           <video
@@ -89,7 +87,7 @@ export default function Home() {
           </div>
           <div className={styles.verticalBar}></div>
           <div className={styles.playButtonWrapper}>
-            <a href="" className={styles.playButton}>
+            <a href="https://store.steampowered.com/app/570/Dota_2/" className={styles.playButton}>
               <div className={styles.steamLogo}></div>
               <div className={styles.rightSide}>
                 <div className={styles.playforfree}>play for free</div>
@@ -104,13 +102,13 @@ export default function Home() {
         <div className={styles.newsWrapper}>
           <div className={styles.newsHeading}>
             <div className={styles.latestNews}>Latest News</div>
-            <div className={styles.viewAll}>
+            <a className={styles.viewAll} href="https://www.dota2.com/news">
               View All
               <div className={styles.rightArrow}></div>
-            </div>
+            </a>
           </div>
           <div className={styles.newsCapsules}>
-            <a href="" className={styles.blogCapsule}>
+            <a href="https://www.dota2.com/newsentry/6127782523022178336" className={styles.blogCapsule}>
               <div className={styles.capsuleContent} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/8256a7d97ebed00f8e77c4834f9306d08976e15c.png')"}}>
                 <div className={styles.capsuleText}>
                   <div className={styles.capsuleDate}>March 22, 2024</div>
@@ -120,7 +118,7 @@ export default function Home() {
               </div>
               <div className={styles.bottomFade}></div>
             </a>
-            <a href="" className={styles.blogCapsule}>
+            <a href="https://www.dota2.com/newsentry/4115798034511524384" className={styles.blogCapsule}>
               <div className={styles.capsuleContent} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/040f3cd7b283452e7939cf075284647905cbb900.png')"}}>
                 <div className={styles.capsuleText}>
                   <div className={styles.capsuleDate}>March 9, 2024</div>
@@ -130,7 +128,7 @@ export default function Home() {
               </div>
               <div className={styles.bottomFade}></div>
             </a>
-            <a href="" className={styles.blogCapsule}>
+            <a href="https://www.dota2.com/newsentry/4169840594114934858" className={styles.blogCapsule}>
               <div className={styles.capsuleContent} style={{backgroundImage: "url('https://clan.cloudflare.steamstatic.com/images/3703047/005df03fc8e0a1f0370db32eedf47f877aef119e.png')"}}>
                 <div className={styles.capsuleText}>
                   <div className={styles.capsuleDate}>March 6, 2024</div>
@@ -147,23 +145,880 @@ export default function Home() {
         <div className={styles.fadeContainer + ' ' + styles.fadeTop}></div>
         <div className={styles.battleBG}>
           <img className={styles.battleImg} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/radiant_dire5.jpg" alt="battle" />
+          <img className={styles.battleImgMobile} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/battle_mobile.jpg" alt="battleMobile" />
         </div>
         <div className={styles.battleText}>
           <div
-            className={styles.battleHeaderText}
+            className={styles.headerText}
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <span className={styles.joinThe}>Join the</span>
+            <span className={styles.minor}>Join the</span>
             <br />
-            <span className={styles.ancient}>Battle of the Ancients</span>
+            Battle of the Ancients
           </div>
           <div className={styles.verticalBar}></div>
-          <div className={styles.battleBodyText}>
+          <div className={styles.bodyText}>
             Every day, millions of players worldwide enter the battle as one of over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest multi-player action RTS game ever made and there's always a new strategy or tactic to discover. It's completely free to play and always will be – start defending your ancient now.
-            <a className={styles.battleButton} href="">See What's new</a>
+            <a className={styles.standardButton} href="https://www.dota2.com/news">See What's new</a>
           </div>
         </div>
+      </div>
+      <div className={styles.choose}>
+        <div 
+          className={styles.headerText + ' ' + styles.chooseHeader}
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <span className={styles.minor}>Who will you</span>
+          <br />
+          Choose?
+        </div>
+        <div className={styles.verticalBar}></div>
+        <div className={styles.bodyText}>
+          From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory.
+          <a className={styles.standardButton} href="https://www.dota2.com/heroes">View all Heroes</a>
+        </div>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroGridRow} style={{width: '5300px', animationDuration:'100s'}}>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a><a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+          </div>
+          <div className={styles.heroGridRow} style={{width: '5300px', animationDuration:'120s', animationDirection:'reverse'}}>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a><a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+          </div>
+          <div className={styles.heroGridRow} style={{width: '5300px', animationDuration:'137s'}}>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a><a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+          </div>
+          <div className={styles.heroGridRow} style={{width: '5300px', animationDuration:'87s', animationDirection:'reverse'}}>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a><a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+          </div>
+          <div className={styles.heroGridRow} style={{width: '5300px', animationDuration:'130s'}}>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a><a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png" alt="" />
+                <div className={styles.heroName}>Anti-Mage</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+            <a className={styles.heroIcon} href="" style={{backgroundImage: 'url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png)'}}>
+              <div className={styles.heroNameContainer}>
+                <img className={styles.primaryStatIcon} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png" alt="" />
+                <div className={styles.heroName}>Lich</div>
+              </div>
+              <div className={styles.fadeHero}>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className={styles.proCircuit}>
+        <div className={styles.dpcImgs}>
+          <img className={styles.dpcImg + " " + styles.dpcImg1} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/dpc_ti9_1.jpg" data-aos="fade-up" data-aos-duration="2500" data-aos-delay="300" alt="" />
+          <img className={styles.dpcImg + " " + styles.dpcImg2} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/dpc_ti9_2.jpg" data-aos="fade-up" data-aos-duration="2500" data-aos-delay="600" alt="" />
+          <img className={styles.dpcImg + " " + styles.dpcImg3} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/dpc_ti9_3.jpg" data-aos="fade-up" data-aos-duration="2500" data-aos-delay="1000" alt="" />
+        </div>
+        <div className={styles.dpcIcon}></div>
+        <div className={styles.headerText}>
+          <span className={styles.minor}>The</span>
+          <br />
+          Dota Pro Circuit
+        </div>
+        <div className={styles.verticalBar}></div>
+        <div className={styles.bodyText}>
+          When not climbing the ranks, you'll be able to learn from the best. The Dota Pro Circuit features ultra-high-level Dota 2 competition streaming regularly in the game client, on Twitch and Steam.TV. Culminating in the largest e-sports championship in the world, The International, professional Dota 2 is an event not to be missed.
+        </div>
+      </div>
+      <div className={styles.joinBattle}>
+        <div className={styles.headerText + " " + styles.joinBattleText}>
+          <span className={styles.minor}>Join the</span>
+          <br />
+          Battle
+        </div>
+        <div className={styles.verticalBar}></div>
+        <a className={styles.standardButton} href="https://store.steampowered.com/app/570/Dota_2/">Play free now</a>
+      </div>
+      <div className={styles.footer}>
+        <div className={styles.footerLogos}>
+          <a className={styles.footerLogo} href=""><img className={styles.footerLogoImg} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/valve_logo.png" alt="" /></a>
+          <a className={styles.footerLogo} href=""><img className={styles.footerLogoImg} src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/dota_footer_logo.png" alt="" /></a>
+        </div>
+        <div className={styles.trademark}>Dota and the Dota logo are trademarks and/or registered trademarks of Valve Corporation. 2023 Valve Corporation, all rights reserved.</div>
       </div>
     </main>
   );
